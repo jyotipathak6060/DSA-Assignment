@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include<iostream>
+using namespace std;
+void updated(int *a,int *b) {
+    int c = *a;
+   *a = (*a)+ (*b);
+   if(*b>c)
+   *b =  (*b)-c;
+   else 
+        *b= c-(*b);
+  
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    cin>>a>>b;
+    updated(pa, pb);
+    cout<<a<<endl;
+    cout<<b<<endl;
+
+    return 0;
+}
